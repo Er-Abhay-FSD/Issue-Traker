@@ -1,0 +1,33 @@
+<nav
+  class="navbar navbar-expand-sm"
+  style="
+    background-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    
+  "
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand ms-4"
+      href="/"
+      style="font-weight: bolder; color: white"
+      >Issue Tracker
+    </a>
+    <% if( title === "Project Page"){ %> <%- include('_issue_form'); %> <%
+    }else{ %> <%- include('_project_form'); %> <% } %>
+  </div>
+  <style>
+    .navbar-brand:hover {
+      color: red;
+      position: fixed;
+    }
+  </style>
+</nav>
